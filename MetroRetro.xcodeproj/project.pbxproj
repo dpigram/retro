@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D28009ED1F36575A00E8BE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D28009EC1F36575A00E8BE10 /* main.m */; };
+		D28009F01F36575A00E8BE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D28009EF1F36575A00E8BE10 /* AppDelegate.m */; };
+		D28009F61F36575A00E8BE10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28009F41F36575A00E8BE10 /* Main.storyboard */; };
+		D28009F91F36575A00E8BE10 /* MetroRetro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D28009F71F36575A00E8BE10 /* MetroRetro.xcdatamodeld */; };
+		D28009FB1F36575A00E8BE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28009FA1F36575A00E8BE10 /* Assets.xcassets */; };
+		D28009FE1F36575A00E8BE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28009FC1F36575A00E8BE10 /* LaunchScreen.storyboard */; };
+		D2800A091F36575A00E8BE10 /* MetroRetroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A081F36575A00E8BE10 /* MetroRetroTests.m */; };
+		D2800A141F36575A00E8BE10 /* MetroRetroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */; };
+		D2800A241F365A4300E8BE10 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A221F365A4300E8BE10 /* LoginViewController.m */; };
+		D2800A251F365A4300E8BE10 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2800A231F365A4300E8BE10 /* LoginViewController.xib */; };
+		D2800A281F365E2100E8BE10 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A271F365E2100E8BE10 /* CoreDataManager.m */; };
+		D2800A2C1F3660F900E8BE10 /* LoginServices.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A2B1F3660F900E8BE10 /* LoginServices.m */; };
+		D2800A321F381F8200E8BE10 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A301F381F8200E8BE10 /* HomeScreenViewController.m */; };
+		D2800A331F381F8200E8BE10 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2800A311F381F8200E8BE10 /* HomeScreenViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2800A051F36575A00E8BE10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D28009E01F36575A00E8BE10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D28009E71F36575A00E8BE10;
+			remoteInfo = MetroRetro;
+		};
+		D2800A101F36575A00E8BE10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D28009E01F36575A00E8BE10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D28009E71F36575A00E8BE10;
+			remoteInfo = MetroRetro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D28009E81F36575A00E8BE10 /* MetroRetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroRetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28009EC1F36575A00E8BE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D28009EE1F36575A00E8BE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D28009EF1F36575A00E8BE10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D28009F51F36575A00E8BE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D28009F81F36575A00E8BE10 /* MetroRetro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MetroRetro.xcdatamodel; sourceTree = "<group>"; };
+		D28009FA1F36575A00E8BE10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D28009FD1F36575A00E8BE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D28009FF1F36575A00E8BE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2800A041F36575A00E8BE10 /* MetroRetroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroRetroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2800A081F36575A00E8BE10 /* MetroRetroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetroRetroTests.m; sourceTree = "<group>"; };
+		D2800A0A1F36575A00E8BE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2800A0F1F36575A00E8BE10 /* MetroRetroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroRetroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetroRetroUITests.m; sourceTree = "<group>"; };
+		D2800A151F36575A00E8BE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2800A211F365A4300E8BE10 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D2800A221F365A4300E8BE10 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D2800A231F365A4300E8BE10 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D2800A261F365E2100E8BE10 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		D2800A271F365E2100E8BE10 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		D2800A2A1F3660F900E8BE10 /* LoginServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServices.h; sourceTree = "<group>"; };
+		D2800A2B1F3660F900E8BE10 /* LoginServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginServices.m; sourceTree = "<group>"; };
+		D2800A2D1F37F54200E8BE10 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		D2800A2F1F381F8200E8BE10 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
+		D2800A301F381F8200E8BE10 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
+		D2800A311F381F8200E8BE10 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D28009E51F36575A00E8BE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2800A011F36575A00E8BE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2800A0C1F36575A00E8BE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D28009DF1F36575A00E8BE10 = {
+			isa = PBXGroup;
+			children = (
+				D28009EA1F36575A00E8BE10 /* MetroRetro */,
+				D2800A071F36575A00E8BE10 /* MetroRetroTests */,
+				D2800A121F36575A00E8BE10 /* MetroRetroUITests */,
+				D28009E91F36575A00E8BE10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D28009E91F36575A00E8BE10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D28009E81F36575A00E8BE10 /* MetroRetro.app */,
+				D2800A041F36575A00E8BE10 /* MetroRetroTests.xctest */,
+				D2800A0F1F36575A00E8BE10 /* MetroRetroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D28009EA1F36575A00E8BE10 /* MetroRetro */ = {
+			isa = PBXGroup;
+			children = (
+				D2800A2E1F381F5C00E8BE10 /* HomeScreen */,
+				D2800A291F365FCF00E8BE10 /* Login */,
+				D28009EE1F36575A00E8BE10 /* AppDelegate.h */,
+				D28009EF1F36575A00E8BE10 /* AppDelegate.m */,
+				D28009F41F36575A00E8BE10 /* Main.storyboard */,
+				D28009FA1F36575A00E8BE10 /* Assets.xcassets */,
+				D28009FC1F36575A00E8BE10 /* LaunchScreen.storyboard */,
+				D28009FF1F36575A00E8BE10 /* Info.plist */,
+				D28009F71F36575A00E8BE10 /* MetroRetro.xcdatamodeld */,
+				D28009EB1F36575A00E8BE10 /* Supporting Files */,
+				D2800A261F365E2100E8BE10 /* CoreDataManager.h */,
+				D2800A271F365E2100E8BE10 /* CoreDataManager.m */,
+				D2800A2D1F37F54200E8BE10 /* constants.h */,
+			);
+			path = MetroRetro;
+			sourceTree = "<group>";
+		};
+		D28009EB1F36575A00E8BE10 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D28009EC1F36575A00E8BE10 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2800A071F36575A00E8BE10 /* MetroRetroTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2800A081F36575A00E8BE10 /* MetroRetroTests.m */,
+				D2800A0A1F36575A00E8BE10 /* Info.plist */,
+			);
+			path = MetroRetroTests;
+			sourceTree = "<group>";
+		};
+		D2800A121F36575A00E8BE10 /* MetroRetroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */,
+				D2800A151F36575A00E8BE10 /* Info.plist */,
+			);
+			path = MetroRetroUITests;
+			sourceTree = "<group>";
+		};
+		D2800A291F365FCF00E8BE10 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D2800A211F365A4300E8BE10 /* LoginViewController.h */,
+				D2800A221F365A4300E8BE10 /* LoginViewController.m */,
+				D2800A231F365A4300E8BE10 /* LoginViewController.xib */,
+				D2800A2A1F3660F900E8BE10 /* LoginServices.h */,
+				D2800A2B1F3660F900E8BE10 /* LoginServices.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		D2800A2E1F381F5C00E8BE10 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D2800A2F1F381F8200E8BE10 /* HomeScreenViewController.h */,
+				D2800A301F381F8200E8BE10 /* HomeScreenViewController.m */,
+				D2800A311F381F8200E8BE10 /* HomeScreenViewController.xib */,
+			);
+			name = HomeScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D28009E71F36575A00E8BE10 /* MetroRetro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2800A181F36575A00E8BE10 /* Build configuration list for PBXNativeTarget "MetroRetro" */;
+			buildPhases = (
+				D28009E41F36575A00E8BE10 /* Sources */,
+				D28009E51F36575A00E8BE10 /* Frameworks */,
+				D28009E61F36575A00E8BE10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetroRetro;
+			productName = MetroRetro;
+			productReference = D28009E81F36575A00E8BE10 /* MetroRetro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2800A031F36575A00E8BE10 /* MetroRetroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2800A1B1F36575A00E8BE10 /* Build configuration list for PBXNativeTarget "MetroRetroTests" */;
+			buildPhases = (
+				D2800A001F36575A00E8BE10 /* Sources */,
+				D2800A011F36575A00E8BE10 /* Frameworks */,
+				D2800A021F36575A00E8BE10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2800A061F36575A00E8BE10 /* PBXTargetDependency */,
+			);
+			name = MetroRetroTests;
+			productName = MetroRetroTests;
+			productReference = D2800A041F36575A00E8BE10 /* MetroRetroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D2800A0E1F36575A00E8BE10 /* MetroRetroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2800A1E1F36575A00E8BE10 /* Build configuration list for PBXNativeTarget "MetroRetroUITests" */;
+			buildPhases = (
+				D2800A0B1F36575A00E8BE10 /* Sources */,
+				D2800A0C1F36575A00E8BE10 /* Frameworks */,
+				D2800A0D1F36575A00E8BE10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2800A111F36575A00E8BE10 /* PBXTargetDependency */,
+			);
+			name = MetroRetroUITests;
+			productName = MetroRetroUITests;
+			productReference = D2800A0F1F36575A00E8BE10 /* MetroRetroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D28009E01F36575A00E8BE10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Terell Pigram";
+				TargetAttributes = {
+					D28009E71F36575A00E8BE10 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = L4V8E2GMT3;
+						ProvisioningStyle = Automatic;
+					};
+					D2800A031F36575A00E8BE10 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = L4V8E2GMT3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D28009E71F36575A00E8BE10;
+					};
+					D2800A0E1F36575A00E8BE10 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = L4V8E2GMT3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D28009E71F36575A00E8BE10;
+					};
+				};
+			};
+			buildConfigurationList = D28009E31F36575A00E8BE10 /* Build configuration list for PBXProject "MetroRetro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D28009DF1F36575A00E8BE10;
+			productRefGroup = D28009E91F36575A00E8BE10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D28009E71F36575A00E8BE10 /* MetroRetro */,
+				D2800A031F36575A00E8BE10 /* MetroRetroTests */,
+				D2800A0E1F36575A00E8BE10 /* MetroRetroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D28009E61F36575A00E8BE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2800A251F365A4300E8BE10 /* LoginViewController.xib in Resources */,
+				D28009FE1F36575A00E8BE10 /* LaunchScreen.storyboard in Resources */,
+				D2800A331F381F8200E8BE10 /* HomeScreenViewController.xib in Resources */,
+				D28009FB1F36575A00E8BE10 /* Assets.xcassets in Resources */,
+				D28009F61F36575A00E8BE10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2800A021F36575A00E8BE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2800A0D1F36575A00E8BE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D28009E41F36575A00E8BE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2800A241F365A4300E8BE10 /* LoginViewController.m in Sources */,
+				D2800A2C1F3660F900E8BE10 /* LoginServices.m in Sources */,
+				D28009F01F36575A00E8BE10 /* AppDelegate.m in Sources */,
+				D2800A281F365E2100E8BE10 /* CoreDataManager.m in Sources */,
+				D28009F91F36575A00E8BE10 /* MetroRetro.xcdatamodeld in Sources */,
+				D28009ED1F36575A00E8BE10 /* main.m in Sources */,
+				D2800A321F381F8200E8BE10 /* HomeScreenViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2800A001F36575A00E8BE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2800A091F36575A00E8BE10 /* MetroRetroTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2800A0B1F36575A00E8BE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2800A141F36575A00E8BE10 /* MetroRetroUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2800A061F36575A00E8BE10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D28009E71F36575A00E8BE10 /* MetroRetro */;
+			targetProxy = D2800A051F36575A00E8BE10 /* PBXContainerItemProxy */;
+		};
+		D2800A111F36575A00E8BE10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D28009E71F36575A00E8BE10 /* MetroRetro */;
+			targetProxy = D2800A101F36575A00E8BE10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D28009F41F36575A00E8BE10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D28009F51F36575A00E8BE10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D28009FC1F36575A00E8BE10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D28009FD1F36575A00E8BE10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2800A161F36575A00E8BE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D2800A171F36575A00E8BE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2800A191F36575A00E8BE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L4V8E2GMT3;
+				INFOPLIST_FILE = MetroRetro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D2800A1A1F36575A00E8BE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L4V8E2GMT3;
+				INFOPLIST_FILE = MetroRetro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D2800A1C1F36575A00E8BE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = L4V8E2GMT3;
+				INFOPLIST_FILE = MetroRetroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetroRetro.app/MetroRetro";
+			};
+			name = Debug;
+		};
+		D2800A1D1F36575A00E8BE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = L4V8E2GMT3;
+				INFOPLIST_FILE = MetroRetroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetroRetro.app/MetroRetro";
+			};
+			name = Release;
+		};
+		D2800A1F1F36575A00E8BE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = L4V8E2GMT3;
+				INFOPLIST_FILE = MetroRetroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MetroRetro;
+			};
+			name = Debug;
+		};
+		D2800A201F36575A00E8BE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = L4V8E2GMT3;
+				INFOPLIST_FILE = MetroRetroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MetroRetro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D28009E31F36575A00E8BE10 /* Build configuration list for PBXProject "MetroRetro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2800A161F36575A00E8BE10 /* Debug */,
+				D2800A171F36575A00E8BE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2800A181F36575A00E8BE10 /* Build configuration list for PBXNativeTarget "MetroRetro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2800A191F36575A00E8BE10 /* Debug */,
+				D2800A1A1F36575A00E8BE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D2800A1B1F36575A00E8BE10 /* Build configuration list for PBXNativeTarget "MetroRetroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2800A1C1F36575A00E8BE10 /* Debug */,
+				D2800A1D1F36575A00E8BE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D2800A1E1F36575A00E8BE10 /* Build configuration list for PBXNativeTarget "MetroRetroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2800A1F1F36575A00E8BE10 /* Debug */,
+				D2800A201F36575A00E8BE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D28009F71F36575A00E8BE10 /* MetroRetro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D28009F81F36575A00E8BE10 /* MetroRetro.xcdatamodel */,
+			);
+			currentVersion = D28009F81F36575A00E8BE10 /* MetroRetro.xcdatamodel */;
+			path = MetroRetro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D28009E01F36575A00E8BE10 /* Project object */;
+}
