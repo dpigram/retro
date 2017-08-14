@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface LoginServices : NSObject
-- (void)AuthenticateWithUsername: (NSString *) username andPassword: (NSString *)password withCompletionHandler: (void (^)(NSDictionary *data)) completion;
++ (id)shareInstance;
+
+- (void)authenticateWithUsername: (NSString *) username
+                     andPassword: (NSString *)password
+           withCompletionHandler: (void (^)(NSDictionary *data, NSError *error)) completion;
+
+- (void)requestAllTeamsWithCompletionHandler:(void (^)(NSArray *data, NSError *error)) completion;
 
 - (void)replaceUserSettingsWithUserData: (NSDictionary *)userdata withCompletionHandler: (void (^)(void)) completion;
 @end

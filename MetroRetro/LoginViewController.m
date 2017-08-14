@@ -30,6 +30,7 @@
 - (IBAction)forgotPasswordTapped:(id)sender {
     NSLog(@"forgot password");
 }
+
 - (IBAction)signUpButtonTapped:(id)sender {
    
 }
@@ -38,29 +39,31 @@
     NSLog(@"%@", myString);
     
     if([self validateCreds]){
-        LoginServices *service = [[LoginServices alloc] init];
-        [service AuthenticateWithUsername:self.username.text andPassword:self.password.text withCompletionHandler:^(NSDictionary *data) {
-            NSString *status = [data valueForKey:@"status"];
-            NSString *message = [data valueForKey:@"message"];
-            NSMutableDictionary *userData = [data valueForKey:@"data"];
-            
-            if([status isEqualToString:@"success"]){
-                [service replaceUserSettingsWithUserData:userData withCompletionHandler:^{
-                    HomeScreenViewController *home = [[HomeScreenViewController alloc] init];
-                    [self presentViewController:home animated:true completion:nil];
-                }];
-            }
-            else{
+        LoginServices *service = [LoginServices shareInstance];
+        
+        [service authenticateWithUsername:self.username.text andPassword:self.password.text withCompletionHandler:^(NSDictionary *data, NSError *error) {
+            if (!error) {
+                NSString *status = [data valueForKey:@"status"];
+                NSString *message = [data valueForKey:@"message"];
+                NSMutableDictionary *userData = [data valueForKey:@"data"];
                 
+                if([status isEqualToString:@"success"]){
+                    [service replaceUserSettingsWithUserData:userData withCompletionHandler:^{
+                        HomeScreenViewController *home = [[HomeScreenViewController alloc] init];
+                        [self presentViewController:home animated:true completion:nil];
+                    }];
+                }
+                else{
+                }
+            } else {
+                //handle error
             }
-            
         }];
     }
     
 }
 
 - (BOOL) validateCreds{
-    
     if(self.username.text && self.username.text.length > 0 && self.password.text && self.password.text.length > 0){
         return true;
     }

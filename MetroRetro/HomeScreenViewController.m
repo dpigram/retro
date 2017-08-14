@@ -8,6 +8,7 @@
 
 #import "HomeScreenViewController.h"
 #import "CoreDataManager.h"
+#import "LoginServices.h"
 
 @interface HomeScreenViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *email;
@@ -19,6 +20,10 @@
     [super viewDidLoad];
     NSManagedObject *object = [[CoreDataManager sharedManager] getLoggedInUsersettingsByUsername:@"tpigram"];
     self.email.text = [object valueForKey:@"email"];
+    
+    [[LoginServices shareInstance] requestAllTeamsWithCompletionHandler:^(NSArray *data, NSError *error) {
+        NSLog(@"%@", data);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

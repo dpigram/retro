@@ -16,25 +16,31 @@
 
 @implementation LoginServices
 
-- (void)AuthenticateWithUsername: (NSString *) username andPassword: (NSString *)password withCompletionHandler: (void (^)(NSDictionary *data)) completion{
++ (id)shareInstance {
+    static dispatch_once_t onceToken = 0;
+    static LoginServices *shared = nil;
+    
+    dispatch_once(&onceToken, ^{
+        shared = [[LoginServices alloc] init];
+    });
+    
+    return shared;
+}
 
+- (void)authenticateWithUsername: (NSString *) username
+                     andPassword: (NSString *)password
+           withCompletionHandler: (void (^)(NSDictionary *data, NSError *error)) completion {
     NSLog(@"user does not exist");
     // if user does not exist, do web service call
     NSString *urlString = [NSString stringWithFormat:@"%@/user/auth", kBaseURL];
     
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    
-    NSString *authStr = @"tpigram:admin123";
-    NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodedStringWithOptions:0]];
-    [request setValue:authValue forHTTPHeaderField:@"Authorization"];
-    [request setHTTPMethod:@"POST"];
+    NSMutableURLRequest *request = [self urlRequestWithUrlString:urlString method:@"POST"];
     
     NSString *postParams = [NSString stringWithFormat:@"username=%@&password=%@", username, password];
     NSData *postData = [postParams dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:postData];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"RESPONSE: %@",response);
@@ -48,12 +54,16 @@
                 
                 if (jsonError) {
                     // Error Parsing JSON
-                    
                 } else {
                     // Success Parsing JSON
                     // Log NSDictionary response:
-                    NSLog(@"%@",jsonResponse);
-                    completion(jsonResponse);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (!jsonResponse){
+                            completion([NSDictionary new], error);
+                        } else {
+                            completion(jsonResponse, nil);
+                        }
+                    });
                 }
             }  else {
                 //Web server is returning an error
@@ -65,6 +75,41 @@
     }] resume];
 }
 
+-(void)requestAllTeamsWithCompletionHandler:(void (^)(NSArray *dictionary, NSError *error))completion {
+    NSString *urlString = [NSString stringWithFormat:@"%@/teams", kBaseURL];
+    NSMutableURLRequest *request = [self urlRequestWithUrlString:urlString method:@"GET"];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    [[session dataTaskWithRequest:request
+               completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                   if(!error) {
+                       NSError *jsonError = nil;
+                       id teams = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                       if(!error){
+                           if (!teams) {
+                               completion([NSArray new], nil);
+                           } else {
+                               if ([teams isKindOfClass:[NSArray class]]) {
+                                   NSArray *arrTeams = [NSArray arrayWithArray:(NSArray *)teams];
+                                   
+                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                       completion(arrTeams, nil);
+                                   });
+                                   
+                               } else {
+                                   NSLog(@"Error: expecting an array");
+                               }
+                           }
+                       } else {
+                           //handle error
+                       }
+                   } else {
+                       //handle error
+                   }
+               }] resume];
+}
+
 - (void)replaceUserSettingsWithUserData: (NSDictionary *)userdata withCompletionHandler: (void (^)(void)) completion {
     // remove old useraettings
     [[CoreDataManager sharedManager] deleteUserSettingsWithCompletionHandler:^{
@@ -72,5 +117,16 @@
             completion();
         }];
     }];
+}
+
+- (NSMutableURLRequest *)urlRequestWithUrlString:(NSString *) url method:(NSString *)method {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSString *authStr = @"tpigram:admin123";
+    NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodedStringWithOptions:0]];
+    [request setValue:authValue forHTTPHeaderField:@"Authorization"];
+    [request setHTTPMethod:method];
+    
+    return request;
 }
 @end
