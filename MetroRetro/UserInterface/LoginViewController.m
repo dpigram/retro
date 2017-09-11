@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoginServices.h"
-#import "HomeScreenViewController.h"
+#import "MetroRetro-Swift.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *username;
@@ -38,27 +38,27 @@
     NSString *myString = [NSString stringWithFormat:@"usrname: %@, passowrd %@", self.username.text, self.password.text];
     NSLog(@"%@", myString);
     
-    if([self validateCreds]){
-        LoginServices *service = [LoginServices shareInstance];
+    if(YES){
+//        LoginServices *service = [LoginServices shareInstance];
         
-        [service authenticateWithUsername:self.username.text andPassword:self.password.text withCompletionHandler:^(NSDictionary *data, NSError *error) {
-            if (!error) {
-                NSString *status = [data valueForKey:@"status"];
-                NSString *message = [data valueForKey:@"message"];
-                NSMutableDictionary *userData = [data valueForKey:@"data"];
-                
-                if([status isEqualToString:@"success"]){
-                    [service replaceUserSettingsWithUserData:userData withCompletionHandler:^{
-                        HomeScreenViewController *home = [[HomeScreenViewController alloc] init];
-                        [self presentViewController:home animated:true completion:nil];
-                    }];
-                }
-                else{
-                }
-            } else {
-                //handle error
-            }
-        }];
+//        [service authenticateWithUsername:self.username.text andPassword:self.password.text withCompletionHandler:^(NSDictionary *data, NSError *error) {
+//            if (!error) {
+//                NSString *status = [data valueForKey:@"status"];
+//                NSString *message = [data valueForKey:@"message"];
+//                NSMutableDictionary *userData = [data valueForKey:@"data"];
+//                
+//                if([status isEqualToString:@"success"]){
+//                    [service replaceUserSettingsWithUserData:userData withCompletionHandler:^{
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+//                    }];
+//                }
+//                else{
+//                }
+//            } else {
+//                //handle error
+//            }
+//        }];
     }
     
 }

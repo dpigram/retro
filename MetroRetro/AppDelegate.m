@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "CoreDataManager.h"
+#import "MetroRetro-Swift.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +21,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // setting root view controller
-    LoginViewController *vc = [[LoginViewController alloc] init];
+    UIStoryboard *storeyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    HomeScreenViewController *homeScreen = (HomeScreenViewController*)[storeyboard instantiateViewControllerWithIdentifier:@"HomeScreenViewController"];
     self.window = [[UIWindow alloc] init];
-    self.window.rootViewController = vc;
+    self.window.rootViewController = homeScreen;
     
     // initializing core data stack
     [CoreDataManager initializeCoredataStack];

@@ -1,5 +1,5 @@
 //
-//  constants.h
+//  Constants.h
 //  MetroRetro
 //
 //  Created by Terell Pigram on 8/6/17.
@@ -10,7 +10,7 @@
 #define constants_h
 
 
-#endif /* constants_h */
+#endif /* Constants_h */
 
 #ifdef DEBUG
 #define kBaseURL @"http://localhost:8000"

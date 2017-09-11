@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903432CB1F65E092004AA40E /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432C81F65E092004AA40E /* CoreDataManager.m */; };
+		903432CC1F65E092004AA40E /* LoginServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432CA1F65E092004AA40E /* LoginServices.m */; };
+		903432D61F65E0A4004AA40E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432D21F65E0A4004AA40E /* LoginViewController.m */; };
+		903432DB1F65E127004AA40E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903432D91F65E127004AA40E /* LaunchScreen.storyboard */; };
+		905A8E981F660EB2008C1F17 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A8E971F660EB2008C1F17 /* HomeScreenViewController.swift */; };
+		905A8E9D1F661004008C1F17 /* TeamsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A8E9C1F661004008C1F17 /* TeamsListViewController.swift */; };
+		905A8E9F1F6625A3008C1F17 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A8E9E1F6625A3008C1F17 /* TeamDetailViewController.swift */; };
 		D28009ED1F36575A00E8BE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D28009EC1F36575A00E8BE10 /* main.m */; };
 		D28009F01F36575A00E8BE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D28009EF1F36575A00E8BE10 /* AppDelegate.m */; };
 		D28009F61F36575A00E8BE10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28009F41F36575A00E8BE10 /* Main.storyboard */; };
 		D28009F91F36575A00E8BE10 /* MetroRetro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D28009F71F36575A00E8BE10 /* MetroRetro.xcdatamodeld */; };
 		D28009FB1F36575A00E8BE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28009FA1F36575A00E8BE10 /* Assets.xcassets */; };
-		D28009FE1F36575A00E8BE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28009FC1F36575A00E8BE10 /* LaunchScreen.storyboard */; };
 		D2800A091F36575A00E8BE10 /* MetroRetroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A081F36575A00E8BE10 /* MetroRetroTests.m */; };
 		D2800A141F36575A00E8BE10 /* MetroRetroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */; };
-		D2800A241F365A4300E8BE10 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A221F365A4300E8BE10 /* LoginViewController.m */; };
-		D2800A251F365A4300E8BE10 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2800A231F365A4300E8BE10 /* LoginViewController.xib */; };
-		D2800A281F365E2100E8BE10 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A271F365E2100E8BE10 /* CoreDataManager.m */; };
-		D2800A2C1F3660F900E8BE10 /* LoginServices.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A2B1F3660F900E8BE10 /* LoginServices.m */; };
-		D2800A321F381F8200E8BE10 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A301F381F8200E8BE10 /* HomeScreenViewController.m */; };
-		D2800A331F381F8200E8BE10 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2800A311F381F8200E8BE10 /* HomeScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		903432C71F65E092004AA40E /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		903432C81F65E092004AA40E /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		903432C91F65E092004AA40E /* LoginServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServices.h; sourceTree = "<group>"; };
+		903432CA1F65E092004AA40E /* LoginServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginServices.m; sourceTree = "<group>"; };
+		903432D11F65E0A4004AA40E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		903432D21F65E0A4004AA40E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		903432D81F65E0D1004AA40E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		903432DA1F65E127004AA40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		905A8E931F65F60F008C1F17 /* MetroRetro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MetroRetro-Bridging-Header.h"; path = "UserInterface/MetroRetro-Bridging-Header.h"; sourceTree = "<group>"; };
+		905A8E971F660EB2008C1F17 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		905A8E9C1F661004008C1F17 /* TeamsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsListViewController.swift; sourceTree = "<group>"; };
+		905A8E9E1F6625A3008C1F17 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		D28009E81F36575A00E8BE10 /* MetroRetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroRetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28009EC1F36575A00E8BE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D28009EE1F36575A00E8BE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,7 +60,6 @@
 		D28009F51F36575A00E8BE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D28009F81F36575A00E8BE10 /* MetroRetro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MetroRetro.xcdatamodel; sourceTree = "<group>"; };
 		D28009FA1F36575A00E8BE10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D28009FD1F36575A00E8BE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D28009FF1F36575A00E8BE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2800A041F36575A00E8BE10 /* MetroRetroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroRetroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2800A081F36575A00E8BE10 /* MetroRetroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetroRetroTests.m; sourceTree = "<group>"; };
@@ -56,17 +67,6 @@
 		D2800A0F1F36575A00E8BE10 /* MetroRetroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroRetroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetroRetroUITests.m; sourceTree = "<group>"; };
 		D2800A151F36575A00E8BE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2800A211F365A4300E8BE10 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		D2800A221F365A4300E8BE10 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		D2800A231F365A4300E8BE10 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		D2800A261F365E2100E8BE10 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
-		D2800A271F365E2100E8BE10 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
-		D2800A2A1F3660F900E8BE10 /* LoginServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServices.h; sourceTree = "<group>"; };
-		D2800A2B1F3660F900E8BE10 /* LoginServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginServices.m; sourceTree = "<group>"; };
-		D2800A2D1F37F54200E8BE10 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
-		D2800A2F1F381F8200E8BE10 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
-		D2800A301F381F8200E8BE10 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
-		D2800A311F381F8200E8BE10 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +94,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		903432C61F65E092004AA40E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				903432D81F65E0D1004AA40E /* Constants.h */,
+				903432C71F65E092004AA40E /* CoreDataManager.h */,
+				903432C81F65E092004AA40E /* CoreDataManager.m */,
+				903432C91F65E092004AA40E /* LoginServices.h */,
+				903432CA1F65E092004AA40E /* LoginServices.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		903432CD1F65E0A4004AA40E /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				D28009F41F36575A00E8BE10 /* Main.storyboard */,
+				903432D91F65E127004AA40E /* LaunchScreen.storyboard */,
+				903432D11F65E0A4004AA40E /* LoginViewController.h */,
+				903432D21F65E0A4004AA40E /* LoginViewController.m */,
+				905A8E961F660EB2008C1F17 /* HomeScreen */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		905A8E961F660EB2008C1F17 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				905A8E971F660EB2008C1F17 /* HomeScreenViewController.swift */,
+				905A8E9B1F660FE3008C1F17 /* TeamsList */,
+				905A8E9E1F6625A3008C1F17 /* TeamDetailViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		905A8E9B1F660FE3008C1F17 /* TeamsList */ = {
+			isa = PBXGroup;
+			children = (
+				905A8E9C1F661004008C1F17 /* TeamsListViewController.swift */,
+			);
+			path = TeamsList;
+			sourceTree = "<group>";
+		};
 		D28009DF1F36575A00E8BE10 = {
 			isa = PBXGroup;
 			children = (
@@ -117,19 +159,15 @@
 		D28009EA1F36575A00E8BE10 /* MetroRetro */ = {
 			isa = PBXGroup;
 			children = (
-				D2800A2E1F381F5C00E8BE10 /* HomeScreen */,
-				D2800A291F365FCF00E8BE10 /* Login */,
+				903432CD1F65E0A4004AA40E /* UserInterface */,
+				903432C61F65E092004AA40E /* Data */,
 				D28009EE1F36575A00E8BE10 /* AppDelegate.h */,
 				D28009EF1F36575A00E8BE10 /* AppDelegate.m */,
-				D28009F41F36575A00E8BE10 /* Main.storyboard */,
+				905A8E931F65F60F008C1F17 /* MetroRetro-Bridging-Header.h */,
 				D28009FA1F36575A00E8BE10 /* Assets.xcassets */,
-				D28009FC1F36575A00E8BE10 /* LaunchScreen.storyboard */,
 				D28009FF1F36575A00E8BE10 /* Info.plist */,
 				D28009F71F36575A00E8BE10 /* MetroRetro.xcdatamodeld */,
 				D28009EB1F36575A00E8BE10 /* Supporting Files */,
-				D2800A261F365E2100E8BE10 /* CoreDataManager.h */,
-				D2800A271F365E2100E8BE10 /* CoreDataManager.m */,
-				D2800A2D1F37F54200E8BE10 /* constants.h */,
 			);
 			path = MetroRetro;
 			sourceTree = "<group>";
@@ -158,28 +196,6 @@
 				D2800A151F36575A00E8BE10 /* Info.plist */,
 			);
 			path = MetroRetroUITests;
-			sourceTree = "<group>";
-		};
-		D2800A291F365FCF00E8BE10 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				D2800A211F365A4300E8BE10 /* LoginViewController.h */,
-				D2800A221F365A4300E8BE10 /* LoginViewController.m */,
-				D2800A231F365A4300E8BE10 /* LoginViewController.xib */,
-				D2800A2A1F3660F900E8BE10 /* LoginServices.h */,
-				D2800A2B1F3660F900E8BE10 /* LoginServices.m */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		D2800A2E1F381F5C00E8BE10 /* HomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				D2800A2F1F381F8200E8BE10 /* HomeScreenViewController.h */,
-				D2800A301F381F8200E8BE10 /* HomeScreenViewController.m */,
-				D2800A311F381F8200E8BE10 /* HomeScreenViewController.xib */,
-			);
-			name = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +266,7 @@
 					D28009E71F36575A00E8BE10 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = L4V8E2GMT3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					D2800A031F36575A00E8BE10 = {
@@ -291,10 +308,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2800A251F365A4300E8BE10 /* LoginViewController.xib in Resources */,
-				D28009FE1F36575A00E8BE10 /* LaunchScreen.storyboard in Resources */,
-				D2800A331F381F8200E8BE10 /* HomeScreenViewController.xib in Resources */,
 				D28009FB1F36575A00E8BE10 /* Assets.xcassets in Resources */,
+				903432DB1F65E127004AA40E /* LaunchScreen.storyboard in Resources */,
 				D28009F61F36575A00E8BE10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,13 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2800A241F365A4300E8BE10 /* LoginViewController.m in Sources */,
-				D2800A2C1F3660F900E8BE10 /* LoginServices.m in Sources */,
 				D28009F01F36575A00E8BE10 /* AppDelegate.m in Sources */,
-				D2800A281F365E2100E8BE10 /* CoreDataManager.m in Sources */,
+				905A8E9F1F6625A3008C1F17 /* TeamDetailViewController.swift in Sources */,
 				D28009F91F36575A00E8BE10 /* MetroRetro.xcdatamodeld in Sources */,
+				903432CB1F65E092004AA40E /* CoreDataManager.m in Sources */,
+				903432D61F65E0A4004AA40E /* LoginViewController.m in Sources */,
 				D28009ED1F36575A00E8BE10 /* main.m in Sources */,
-				D2800A321F381F8200E8BE10 /* HomeScreenViewController.m in Sources */,
+				905A8E9D1F661004008C1F17 /* TeamsListViewController.swift in Sources */,
+				903432CC1F65E092004AA40E /* LoginServices.m in Sources */,
+				905A8E981F660EB2008C1F17 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,20 +379,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		903432D91F65E127004AA40E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				903432DA1F65E127004AA40E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		D28009F41F36575A00E8BE10 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D28009F51F36575A00E8BE10 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D28009FC1F36575A00E8BE10 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D28009FD1F36575A00E8BE10 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -473,11 +492,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = L4V8E2GMT3;
 				INFOPLIST_FILE = MetroRetro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MetroRetro/UserInterface/MetroRetro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -485,17 +509,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = L4V8E2GMT3;
 				INFOPLIST_FILE = MetroRetro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MetroRetro/UserInterface/MetroRetro-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
 		D2800A1C1F36575A00E8BE10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = L4V8E2GMT3;
 				INFOPLIST_FILE = MetroRetroTests/Info.plist;
@@ -509,6 +538,7 @@
 		D2800A1D1F36575A00E8BE10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = L4V8E2GMT3;
 				INFOPLIST_FILE = MetroRetroTests/Info.plist;
@@ -522,6 +552,7 @@
 		D2800A1F1F36575A00E8BE10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L4V8E2GMT3;
 				INFOPLIST_FILE = MetroRetroUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -534,6 +565,7 @@
 		D2800A201F36575A00E8BE10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L4V8E2GMT3;
 				INFOPLIST_FILE = MetroRetroUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -562,6 +594,7 @@
 				D2800A1A1F36575A00E8BE10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2800A1B1F36575A00E8BE10 /* Build configuration list for PBXNativeTarget "MetroRetroTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +603,7 @@
 				D2800A1D1F36575A00E8BE10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2800A1E1F36575A00E8BE10 /* Build configuration list for PBXNativeTarget "MetroRetroUITests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +612,7 @@
 				D2800A201F36575A00E8BE10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
