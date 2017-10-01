@@ -1,4 +1,4 @@
-//
+    //
 //  LoginServices.m
 //  MetroRetro
 //
@@ -9,13 +9,14 @@
 #import "LoginServices.h"
 #import "CoreDataManager.h"
 #import "Constants.h"
+#import "MetroRetro-Swift.h"
 
 @interface LoginServices()
 
 @end
 
 @implementation LoginServices
-
+//http://localhost:8000/user/teams/
 + (id)shareInstance {
     static dispatch_once_t onceToken = 0;
     static LoginServices *shared = nil;
@@ -108,6 +109,52 @@
                        //handle error
                    }
                }] resume];
+}
+
+-(void)requestTeamForUser:(NSInteger) userId completionHandler:(void (^)(NSArray<MRTeam*> *teams, NSError *error))completion {
+    NSString *urlString = [NSString stringWithFormat:@"%@/user/teams/", kBaseURL];
+    NSMutableURLRequest *request = [self urlRequestWithUrlString:urlString method:@"POST"];
+    
+    NSString *postParams = [NSString stringWithFormat:@"userId=%ld", userId];
+    NSData *postData = [postParams dataUsingEncoding:NSUTF8StringEncoding];
+    [request setHTTPBody:postData];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    [[session dataTaskWithRequest:request
+                completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                    if(!error) {
+                        NSError *jsonError = nil;
+                        id teams = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                        if(!error){
+                            if (!teams) {
+                                completion([NSArray new], nil);
+                            } else {
+                                if ([teams isKindOfClass:[NSArray class]]) {
+                                    NSArray *serverTeams = [NSArray arrayWithArray:(NSArray *)teams];
+                                    
+                                    NSMutableArray *displayTeams = [NSMutableArray new];
+                                    for (NSDictionary *dict in serverTeams) {
+                                        MRTeam *team = [[MRTeam alloc] initWithTeamId:[dict[@"id"] integerValue]
+                                                                                 name:dict[@"name"]
+                                                                              ownerId:[dict[@"owner"] integerValue]
+                                                                                 desc:dict[@"description"]];
+                                        [displayTeams addObject:team];
+                                    }
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        completion(displayTeams, nil);
+                                    });
+                                } else {
+                                    NSLog(@"Error: expecting an array");
+                                }
+                            }
+                        } else {
+                            //handle error
+                        }
+                    } else {
+                        //handle error
+                    }
+                }] resume];
 }
 
 - (void)replaceUserSettingsWithUserData: (NSDictionary *)userdata withCompletionHandler: (void (^)(void)) completion {

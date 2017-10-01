@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class MRTeam;
 
 @interface LoginServices : NSObject
 + (id)shareInstance;
@@ -18,4 +19,6 @@
 - (void)requestAllTeamsWithCompletionHandler:(void (^)(NSArray *data, NSError *error)) completion;
 
 - (void)replaceUserSettingsWithUserData: (NSDictionary *)userdata withCompletionHandler: (void (^)(void)) completion;
+
+-(void)requestTeamForUser:(NSInteger) userId completionHandler:(void (^)(NSArray<MRTeam*> *teams, NSError *error))completion;
 @end

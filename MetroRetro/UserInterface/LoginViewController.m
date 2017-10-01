@@ -39,26 +39,25 @@
     NSLog(@"%@", myString);
     
     if(YES){
-//        LoginServices *service = [LoginServices shareInstance];
+        LoginServices *service = [LoginServices shareInstance];
         
-//        [service authenticateWithUsername:self.username.text andPassword:self.password.text withCompletionHandler:^(NSDictionary *data, NSError *error) {
-//            if (!error) {
-//                NSString *status = [data valueForKey:@"status"];
-//                NSString *message = [data valueForKey:@"message"];
-//                NSMutableDictionary *userData = [data valueForKey:@"data"];
-//                
-//                if([status isEqualToString:@"success"]){
-//                    [service replaceUserSettingsWithUserData:userData withCompletionHandler:^{
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-//                    }];
-//                }
-//                else{
-//                }
-//            } else {
-//                //handle error
-//            }
-//        }];
+        [service authenticateWithUsername:self.username.text andPassword:self.password.text withCompletionHandler:^(NSDictionary *data, NSError *error) {
+            if (!error) {
+                NSString *status = [data valueForKey:@"status"];
+                NSString *message = [data valueForKey:@"message"];
+                NSMutableDictionary *userData = [data valueForKey:@"data"];
+                
+                if([status isEqualToString:@"success"]){
+                    [service replaceUserSettingsWithUserData:userData withCompletionHandler:^{
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    }];
+                }
+                else{
+                }
+            } else {
+                //handle error
+            }
+        }];
     }
     
 }

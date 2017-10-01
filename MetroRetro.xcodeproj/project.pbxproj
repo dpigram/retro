@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		902115FA1F81655900917595 /* MRTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902115F91F81655900917595 /* MRTeam.swift */; };
+		902115FB1F81655900917595 /* MRTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902115F91F81655900917595 /* MRTeam.swift */; };
 		903432CB1F65E092004AA40E /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432C81F65E092004AA40E /* CoreDataManager.m */; };
 		903432CC1F65E092004AA40E /* LoginServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432CA1F65E092004AA40E /* LoginServices.m */; };
 		903432D61F65E0A4004AA40E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432D21F65E0A4004AA40E /* LoginViewController.m */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		902115F81F81655900917595 /* MetroRetroUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MetroRetroUITests-Bridging-Header.h"; path = "../MetroRetro/Displayable Data Objects/MetroRetroUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		902115F91F81655900917595 /* MRTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTeam.swift; sourceTree = "<group>"; };
 		903432C71F65E092004AA40E /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		903432C81F65E092004AA40E /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		903432C91F65E092004AA40E /* LoginServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServices.h; sourceTree = "<group>"; };
@@ -94,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		902115F71F8164C400917595 /* Displayable Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				902115F91F81655900917595 /* MRTeam.swift */,
+			);
+			path = "Displayable Data Objects";
+			sourceTree = "<group>";
+		};
 		903432C61F65E092004AA40E /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +173,7 @@
 			children = (
 				903432CD1F65E0A4004AA40E /* UserInterface */,
 				903432C61F65E092004AA40E /* Data */,
+				902115F71F8164C400917595 /* Displayable Data Objects */,
 				D28009EE1F36575A00E8BE10 /* AppDelegate.h */,
 				D28009EF1F36575A00E8BE10 /* AppDelegate.m */,
 				905A8E931F65F60F008C1F17 /* MetroRetro-Bridging-Header.h */,
@@ -192,6 +205,7 @@
 		D2800A121F36575A00E8BE10 /* MetroRetroUITests */ = {
 			isa = PBXGroup;
 			children = (
+				902115F81F81655900917595 /* MetroRetroUITests-Bridging-Header.h */,
 				D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */,
 				D2800A151F36575A00E8BE10 /* Info.plist */,
 			);
@@ -278,6 +292,7 @@
 					D2800A0E1F36575A00E8BE10 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = L4V8E2GMT3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D28009E71F36575A00E8BE10;
 					};
@@ -344,6 +359,7 @@
 				905A8E9D1F661004008C1F17 /* TeamsListViewController.swift in Sources */,
 				903432CC1F65E092004AA40E /* LoginServices.m in Sources */,
 				905A8E981F660EB2008C1F17 /* HomeScreenViewController.swift in Sources */,
+				902115FA1F81655900917595 /* MRTeam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2800A141F36575A00E8BE10 /* MetroRetroUITests.m in Sources */,
+				902115FB1F81655900917595 /* MRTeam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,11 +570,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = L4V8E2GMT3;
 				INFOPLIST_FILE = MetroRetroUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetroUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MetroRetro/Displayable Data Objects/MetroRetroUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MetroRetro;
 			};
 			name = Debug;
@@ -566,11 +587,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = L4V8E2GMT3;
 				INFOPLIST_FILE = MetroRetroUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myCompany.MetroRetroUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MetroRetro/Displayable Data Objects/MetroRetroUITests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MetroRetro;
 			};
 			name = Release;

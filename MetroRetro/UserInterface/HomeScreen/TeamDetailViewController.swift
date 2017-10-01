@@ -11,16 +11,30 @@ import UIKit
 class TeamDetailViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
+    var team: MRTeam?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blue
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updateLabel(notification:)), name: Notification.Name("teamSelected"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadData(notification:)), name: Notification.Name("teamSelected"), object: nil)
 
     }
     
+    
+    func loadData(notification: Notification) -> Void {
+        if let team = notification.object {
+            self.team = team as? MRTeam
+            if let team = self.team {
+                self.label.text = team.name
+                self.descriptionTextView.text = team.desc
+            }
+            
+        }
+    }
     func updateLabel(notification: Notification) -> Void {
         if let name = notification.object {
+            
             self.label.text = name as? String
         }
     }
