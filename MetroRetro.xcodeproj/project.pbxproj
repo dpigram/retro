@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		902115FA1F81655900917595 /* MRTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902115F91F81655900917595 /* MRTeam.swift */; };
 		902115FB1F81655900917595 /* MRTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902115F91F81655900917595 /* MRTeam.swift */; };
+		902D367A1FB92E5E00469EFB /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D36791FB92E5E00469EFB /* TeamDetailViewController.swift */; };
+		902D367D1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D367B1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.swift */; };
+		902D367E1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902D367C1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.xib */; };
+		902D36801FB941DE00469EFB /* MRRetro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D367F1FB941DE00469EFB /* MRRetro.swift */; };
 		903432CB1F65E092004AA40E /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432C81F65E092004AA40E /* CoreDataManager.m */; };
 		903432CC1F65E092004AA40E /* LoginServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432CA1F65E092004AA40E /* LoginServices.m */; };
 		903432D61F65E0A4004AA40E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903432D21F65E0A4004AA40E /* LoginViewController.m */; };
 		903432DB1F65E127004AA40E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903432D91F65E127004AA40E /* LaunchScreen.storyboard */; };
 		905A8E981F660EB2008C1F17 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A8E971F660EB2008C1F17 /* HomeScreenViewController.swift */; };
 		905A8E9D1F661004008C1F17 /* TeamsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A8E9C1F661004008C1F17 /* TeamsListViewController.swift */; };
-		905A8E9F1F6625A3008C1F17 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A8E9E1F6625A3008C1F17 /* TeamDetailViewController.swift */; };
 		D28009ED1F36575A00E8BE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D28009EC1F36575A00E8BE10 /* main.m */; };
 		D28009F01F36575A00E8BE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D28009EF1F36575A00E8BE10 /* AppDelegate.m */; };
 		D28009F61F36575A00E8BE10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28009F41F36575A00E8BE10 /* Main.storyboard */; };
@@ -45,6 +48,10 @@
 /* Begin PBXFileReference section */
 		902115F81F81655900917595 /* MetroRetroUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MetroRetroUITests-Bridging-Header.h"; path = "../MetroRetro/Displayable Data Objects/MetroRetroUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		902115F91F81655900917595 /* MRTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTeam.swift; sourceTree = "<group>"; };
+		902D36791FB92E5E00469EFB /* TeamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
+		902D367B1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospcectiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		902D367C1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetrospcectiveCollectionViewCell.xib; sourceTree = "<group>"; };
+		902D367F1FB941DE00469EFB /* MRRetro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRRetro.swift; sourceTree = "<group>"; };
 		903432C71F65E092004AA40E /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		903432C81F65E092004AA40E /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		903432C91F65E092004AA40E /* LoginServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServices.h; sourceTree = "<group>"; };
@@ -56,7 +63,6 @@
 		905A8E931F65F60F008C1F17 /* MetroRetro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MetroRetro-Bridging-Header.h"; path = "UserInterface/MetroRetro-Bridging-Header.h"; sourceTree = "<group>"; };
 		905A8E971F660EB2008C1F17 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		905A8E9C1F661004008C1F17 /* TeamsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsListViewController.swift; sourceTree = "<group>"; };
-		905A8E9E1F6625A3008C1F17 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		D28009E81F36575A00E8BE10 /* MetroRetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroRetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28009EC1F36575A00E8BE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D28009EE1F36575A00E8BE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,8 +108,19 @@
 			isa = PBXGroup;
 			children = (
 				902115F91F81655900917595 /* MRTeam.swift */,
+				902D367F1FB941DE00469EFB /* MRRetro.swift */,
 			);
 			path = "Displayable Data Objects";
+			sourceTree = "<group>";
+		};
+		902D36781FB92E4200469EFB /* TeamDetail */ = {
+			isa = PBXGroup;
+			children = (
+				902D36791FB92E5E00469EFB /* TeamDetailViewController.swift */,
+				902D367B1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.swift */,
+				902D367C1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.xib */,
+			);
+			path = TeamDetail;
 			sourceTree = "<group>";
 		};
 		903432C61F65E092004AA40E /* Data */ = {
@@ -135,7 +152,7 @@
 			children = (
 				905A8E971F660EB2008C1F17 /* HomeScreenViewController.swift */,
 				905A8E9B1F660FE3008C1F17 /* TeamsList */,
-				905A8E9E1F6625A3008C1F17 /* TeamDetailViewController.swift */,
+				902D36781FB92E4200469EFB /* TeamDetail */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -325,6 +342,7 @@
 			files = (
 				D28009FB1F36575A00E8BE10 /* Assets.xcassets in Resources */,
 				903432DB1F65E127004AA40E /* LaunchScreen.storyboard in Resources */,
+				902D367E1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.xib in Resources */,
 				D28009F61F36575A00E8BE10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,12 +368,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902D367A1FB92E5E00469EFB /* TeamDetailViewController.swift in Sources */,
 				D28009F01F36575A00E8BE10 /* AppDelegate.m in Sources */,
-				905A8E9F1F6625A3008C1F17 /* TeamDetailViewController.swift in Sources */,
 				D28009F91F36575A00E8BE10 /* MetroRetro.xcdatamodeld in Sources */,
+				902D36801FB941DE00469EFB /* MRRetro.swift in Sources */,
 				903432CB1F65E092004AA40E /* CoreDataManager.m in Sources */,
 				903432D61F65E0A4004AA40E /* LoginViewController.m in Sources */,
 				D28009ED1F36575A00E8BE10 /* main.m in Sources */,
+				902D367D1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.swift in Sources */,
 				905A8E9D1F661004008C1F17 /* TeamsListViewController.swift in Sources */,
 				903432CC1F65E092004AA40E /* LoginServices.m in Sources */,
 				905A8E981F660EB2008C1F17 /* HomeScreenViewController.swift in Sources */,

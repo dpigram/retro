@@ -157,6 +157,49 @@
                 }] resume];
 }
 
+-(void)requestRetrosForTeam:(NSInteger) teamId completionHandler:(void (^)(NSArray<MRRetro*> *teams, NSError *error))completion {
+    NSString *urlString = [NSString stringWithFormat:@"%@/retros/", kBaseURL];
+    NSMutableURLRequest *request = [self urlRequestWithUrlString:urlString method:@"POST"];
+    
+    NSString *postParams = [NSString stringWithFormat:@"teamId=%ld", teamId];
+    NSData *postData = [postParams dataUsingEncoding:NSUTF8StringEncoding];
+    [request setHTTPBody:postData];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    [[session dataTaskWithRequest:request
+                completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                    if(!error) {
+                        NSError *jsonError = nil;
+                        id retros = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                        if(!error){
+                            if (!retros) {
+                                completion([NSArray new], nil);
+                            } else {
+                                if ([retros isKindOfClass:[NSArray class]]) {
+                                    NSArray *serverRetros = [NSArray arrayWithArray:(NSArray *)retros];
+                                    
+                                    NSMutableArray *displayRetros = [NSMutableArray new];
+                                    NSLog(@"%@", displayRetros);
+                                    for (NSDictionary *dict in serverRetros) {
+                                        
+                                    }
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        completion(displayRetros, nil);
+                                    });
+                                } else {
+                                    NSLog(@"Error: expecting an array");
+                                }
+                            }
+                        } else {
+                            //handle error
+                        }
+                    } else {
+                        //handle error
+                    }
+                }] resume];
+}
+
 - (void)replaceUserSettingsWithUserData: (NSDictionary *)userdata withCompletionHandler: (void (^)(void)) completion {
     // remove old useraettings
     [[CoreDataManager sharedManager] deleteUserSettingsWithCompletionHandler:^{

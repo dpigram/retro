@@ -31,9 +31,7 @@
     NSLog(@"forgot password");
 }
 
-- (IBAction)signUpButtonTapped:(id)sender {
-   
-}
+
 - (IBAction)SignInButtonTapped:(id)sender {
     NSString *myString = [NSString stringWithFormat:@"usrname: %@, passowrd %@", self.username.text, self.password.text];
     NSLog(@"%@", myString);

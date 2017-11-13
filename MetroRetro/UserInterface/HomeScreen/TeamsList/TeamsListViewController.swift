@@ -18,15 +18,18 @@ class TeamsListViewController: UITableViewController {
     var delegate: TeamListDelegate?
     var refresher = UIRefreshControl()
     let service: LoginServices = LoginServices.shareInstance() as! LoginServices
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.backgroundColor = UIColor(red: 59.0/255, green: 65.0/255, blue: 78.0/255, alpha: 1)
         self.title = "Teams"
         refresher.attributedTitle = NSAttributedString(string: "Refreshing Data");
         refresher.addTarget(self, action: #selector(self.loadData), for: UIControlEvents.valueChanged)
         self.tableView.addSubview(refresher)
+        self.tableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,8 +48,9 @@ class TeamsListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")!
-        
         cell.textLabel?.text = self.teams[indexPath.row].name
+        cell.textLabel?.textColor = UIColor.white
+        cell.backgroundColor = UIColor.clear
 
         return cell
     }
@@ -56,7 +60,6 @@ class TeamsListViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "teamSelected"), object: self.teams[indexPath.row]))
     }
-    
     
     func loadData() {
         self.service.requestTeam(forUser: 3) { (teams: [MRTeam]?, error: Error?) in
@@ -72,5 +75,12 @@ class TeamsListViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let logInVC: LoginViewController  = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        logInVC.modalTransitionStyle = .crossDissolve
+        self.present(logInVC, animated: true, completion: nil)
+    }
+    
 }

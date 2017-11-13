@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class MRTeam;
+@class MRRetro;
 
 @interface LoginServices : NSObject
 + (id)shareInstance;
@@ -21,4 +22,6 @@
 - (void)replaceUserSettingsWithUserData: (NSDictionary *)userdata withCompletionHandler: (void (^)(void)) completion;
 
 -(void)requestTeamForUser:(NSInteger) userId completionHandler:(void (^)(NSArray<MRTeam*> *teams, NSError *error))completion;
+
+-(void)requestRetrosForTeam:(NSInteger) teamId completionHandler:(void (^)(NSArray<MRRetro*> *teams, NSError *error))completion;
 @end

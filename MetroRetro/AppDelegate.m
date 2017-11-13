@@ -24,6 +24,7 @@
     UIStoryboard *storeyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     HomeScreenViewController *homeScreen = (HomeScreenViewController*)[storeyboard instantiateViewControllerWithIdentifier:@"HomeScreenViewController"];
+    homeScreen.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     self.window = [[UIWindow alloc] init];
     self.window.rootViewController = homeScreen;
     
