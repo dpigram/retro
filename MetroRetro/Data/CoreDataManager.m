@@ -27,13 +27,17 @@ static CoreDataManager *sharedManager;
     self = [super init];
     
     if(self){
-        privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-        [privateContext setPersistentStoreCoordinator:persistentStoreCoordinator];
-        
         mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-        [mainContext setParentContext:privateContext];
+        [mainContext setPersistentStoreCoordinator:persistentStoreCoordinator];
+        privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        [privateContext setParentContext:mainContext];
+        
     }
     return self;
+}
+
+- (NSManagedObjectContext *)getMainContext{
+    return mainContext;
 }
 
 + (void) initializeCoredataStack{
@@ -74,70 +78,6 @@ static CoreDataManager *sharedManager;
            }];
         }];
     }];
-}
-
-// insert requests
-- (void)insertUserserttingsWithDictionary: (NSDictionary *)userData withCompletionHandler: (void (^)(void))completion{
-    NSManagedObjectContext *context = [self createTempContext];
-    
-    [context performBlock:^{
-        NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"Usersettings" inManagedObjectContext:context];
-        
-        [object setValue:[userData valueForKey:@"email"] forKey:@"email"];
-        [object setValue:[NSString stringWithFormat:@"%@", [userData valueForKey:@"id"]] forKey:@"id"];
-        [object setValue:[userData valueForKey:@"username"] forKey:@"username"];
-        
-        [self saveTempContext:context withCompletionHandler:^{
-            completion();
-        }];
-    }];
-}
-
-// delete requests
-- (void)deleteUserSettingsWithCompletionHandler: (void(^)(void)) completion{
-    NSManagedObjectContext *context = [self createTempContext];
-    [context performBlock:^{
-        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Usersettings"];
-        NSBatchDeleteRequest *delete = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
-        
-        NSError *deleteError;
-        [context executeRequest:delete error:&deleteError];
-        [self saveTempContext:context withCompletionHandler:^{
-            completion();
-        }];
-    }];
-}
-
-// get requests
-- (BOOL)userExistsByUsername: (NSString *) username {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Usersettings"];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"username = %@", username];
-    [request setPredicate:predicate];
-    
-    NSError *error;
-    NSUInteger count = [mainContext countForFetchRequest:request error:&error];
-    
-    if(count > 0){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
-
-- (NSManagedObject *)getLoggedInUsersettingsByUsername: (NSString *) username {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Usersettings"];
-    NSPredicate *predicate= [NSPredicate predicateWithFormat:@"username = %@", username];
-    [request setPredicate:predicate];
-    
-    NSError * error;
-    NSArray* results = [mainContext executeFetchRequest:request error:&error];
-    if(results.count > 0){
-        return results[0];
-    }
-    else{
-        return nil;
-    }
 }
 
 @end

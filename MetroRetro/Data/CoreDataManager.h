@@ -12,14 +12,7 @@
 @interface CoreDataManager : NSObject
 + (CoreDataManager*) sharedManager;
 + (void) initializeCoredataStack;
-
-// Usersetting get methods;
-- (BOOL)userExistsByUsername: (NSString *) username;
-- (NSManagedObject *)getLoggedInUsersettingsByUsername: (NSString *) username;
-
-// Usersettings delete methods
-- (void)deleteUserSettingsWithCompletionHandler: (void(^)(void)) completion;
-
-// Usersetting insert methods
-- (void)insertUserserttingsWithDictionary: (NSDictionary *)userData withCompletionHandler: (void (^)(void))completion;
+- (NSManagedObjectContext *)createTempContext;
+- (void)saveTempContext: (NSManagedObjectContext *)context withCompletionHandler: (void (^)(void)) completion ;
+- (NSManagedObjectContext *)getMainContext;
 @end

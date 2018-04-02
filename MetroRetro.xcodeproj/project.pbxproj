@@ -26,6 +26,7 @@
 		D28009FB1F36575A00E8BE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28009FA1F36575A00E8BE10 /* Assets.xcassets */; };
 		D2800A091F36575A00E8BE10 /* MetroRetroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A081F36575A00E8BE10 /* MetroRetroTests.m */; };
 		D2800A141F36575A00E8BE10 /* MetroRetroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */; };
+		D2D354CF20719A6500D35EF9 /* UserSettingsServices.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D354CE20719A6500D35EF9 /* UserSettingsServices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		D2800A0F1F36575A00E8BE10 /* MetroRetroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroRetroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetroRetroUITests.m; sourceTree = "<group>"; };
 		D2800A151F36575A00E8BE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2D354CD20719A6500D35EF9 /* UserSettingsServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSettingsServices.h; sourceTree = "<group>"; };
+		D2D354CE20719A6500D35EF9 /* UserSettingsServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSettingsServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				903432C81F65E092004AA40E /* CoreDataManager.m */,
 				903432C91F65E092004AA40E /* LoginServices.h */,
 				903432CA1F65E092004AA40E /* LoginServices.m */,
+				D2D354CD20719A6500D35EF9 /* UserSettingsServices.h */,
+				D2D354CE20719A6500D35EF9 /* UserSettingsServices.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 			files = (
 				902D367A1FB92E5E00469EFB /* TeamDetailViewController.swift in Sources */,
 				D28009F01F36575A00E8BE10 /* AppDelegate.m in Sources */,
+				D2D354CF20719A6500D35EF9 /* UserSettingsServices.m in Sources */,
 				D28009F91F36575A00E8BE10 /* MetroRetro.xcdatamodeld in Sources */,
 				902D36801FB941DE00469EFB /* MRRetro.swift in Sources */,
 				903432CB1F65E092004AA40E /* CoreDataManager.m in Sources */,

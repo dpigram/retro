@@ -65,8 +65,10 @@ class TeamsListViewController: UITableViewController {
         self.service.requestTeam(forUser: 3) { (teams: [MRTeam]?, error: Error?) in
             if let array = teams {
                 self.teams = array
-                self.tableView.reloadData()
-                self.refresher.endRefreshing()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.refresher.endRefreshing()
+                }
             }
         }
     }

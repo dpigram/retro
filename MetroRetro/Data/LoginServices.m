@@ -10,6 +10,7 @@
 #import "CoreDataManager.h"
 #import "Constants.h"
 #import "MetroRetro-Swift.h"
+#import "UserSettingsServices.h"
 
 @interface LoginServices()
 
@@ -20,7 +21,6 @@
 + (id)shareInstance {
     static dispatch_once_t onceToken = 0;
     static LoginServices *shared = nil;
-    
     dispatch_once(&onceToken, ^{
         shared = [[LoginServices alloc] init];
     });
@@ -112,10 +112,13 @@
 }
 
 -(void)requestTeamForUser:(NSInteger) userId completionHandler:(void (^)(NSArray<MRTeam*> *teams, NSError *error))completion {
+    //get user info from coredata
+    NSManagedObject* userSettings = [[UserSettingsServices sharedService] getLoggedInUsersettings];
+    
     NSString *urlString = [NSString stringWithFormat:@"%@/user/teams/", kBaseURL];
     NSMutableURLRequest *request = [self urlRequestWithUrlString:urlString method:@"POST"];
     
-    NSString *postParams = [NSString stringWithFormat:@"userId=%ld", userId];
+    NSString *postParams = [NSString stringWithFormat:@"userId=%@", [userSettings valueForKey:@"id"]];
     NSData *postData = [postParams dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:postData];
     
@@ -158,7 +161,7 @@
 }
 
 -(void)requestRetrosForTeam:(NSInteger) teamId completionHandler:(void (^)(NSArray<MRRetro*> *teams, NSError *error))completion {
-    NSString *urlString = [NSString stringWithFormat:@"%@/retros/", kBaseURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@/team/retros/", kBaseURL];
     NSMutableURLRequest *request = [self urlRequestWithUrlString:urlString method:@"POST"];
     
     NSString *postParams = [NSString stringWithFormat:@"teamId=%ld", teamId];
@@ -182,7 +185,7 @@
                                     NSMutableArray *displayRetros = [NSMutableArray new];
                                     NSLog(@"%@", displayRetros);
                                     for (NSDictionary *dict in serverRetros) {
-                                        
+                                        [displayRetros addObject:[[MRRetro alloc] initWithTitle:[dict valueForKey:@"title"] teamId:(NSInteger)[dict valueForKey:@"team"] retroId:(NSInteger)[dict valueForKey:@"id"]]];
                                     }
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         completion(displayRetros, nil);
@@ -202,11 +205,12 @@
 
 - (void)replaceUserSettingsWithUserData: (NSDictionary *)userdata withCompletionHandler: (void (^)(void)) completion {
     // remove old useraettings
-    [[CoreDataManager sharedManager] deleteUserSettingsWithCompletionHandler:^{
-        [[CoreDataManager sharedManager] insertUserserttingsWithDictionary:userdata withCompletionHandler:^{
+    [[UserSettingsServices sharedService] deleteUserSettingsWithCompletionHandler:^{
+        [[UserSettingsServices sharedService] insertUserserttingsWithDictionary:userdata withCompletionHandler:^{
             completion();
         }];
     }];
+   
 }
 
 - (NSMutableURLRequest *)urlRequestWithUrlString:(NSString *) url method:(NSString *)method {
