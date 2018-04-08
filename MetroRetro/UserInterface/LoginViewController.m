@@ -74,6 +74,9 @@
     }
     
 }
+- (IBAction)signUpButtonTapped:(id)sender {
+    NSLog(@"Sign Up")
+}
 
 - (BOOL) validateCreds{
     if(self.username.text && self.username.text.length > 0 && self.password.text && self.password.text.length > 0){
