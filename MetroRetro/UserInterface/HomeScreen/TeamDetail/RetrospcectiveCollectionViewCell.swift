@@ -10,6 +10,10 @@ import UIKit
 
 class RetrospcectiveCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var retoDescription: UILabel!
+    @IBOutlet weak var numberOfItems: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -78,6 +78,16 @@ extension TeamDetailViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! RetrospcectiveCollectionViewCell
+        if let theData = data {
+            let cellData = theData[indexPath.row];
+            cell.layer.cornerRadius = 5
+            cell.layer.borderColor = UIColor.black.cgColor
+            cell.layer.borderWidth = 0.5
+            cell.title.text = cellData.title
+            cell.retoDescription.text = cellData.retroDescription
+            cell.numberOfItems.text = "\(cellData.items) Items"
+        }
+        
         return cell
     }
     
@@ -93,7 +103,7 @@ extension TeamDetailViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension TeamDetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100.0, height: 100.0)
+        return CGSize(width: 259.0, height: 168.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

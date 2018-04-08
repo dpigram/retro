@@ -185,7 +185,13 @@
                                     NSMutableArray *displayRetros = [NSMutableArray new];
                                     NSLog(@"%@", displayRetros);
                                     for (NSDictionary *dict in serverRetros) {
-                                        [displayRetros addObject:[[MRRetro alloc] initWithTitle:[dict valueForKey:@"title"] teamId:(NSInteger)[dict valueForKey:@"team"] retroId:(NSInteger)[dict valueForKey:@"id"]]];
+                                        [displayRetros addObject:[[MRRetro alloc]
+                                                                  initWithTitle:[dict valueForKey:@"title"]
+                                                                  teamId:[dict valueForKey:@"team"]
+                                                                  retroId:[dict valueForKey:@"id"]
+                                                                  retroDescription:([dict valueForKey:@"description"] != [NSNull null]) ? [dict valueForKey:@"description"] : @""
+                                                                  numberOfItems:[dict valueForKey:@"numberOfRetros"]]];
+                                        
                                     }
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         completion(displayRetros, nil);
