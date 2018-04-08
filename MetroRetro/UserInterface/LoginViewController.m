@@ -75,7 +75,7 @@
     
 }
 - (IBAction)signUpButtonTapped:(id)sender {
-    NSLog(@"Sign Up")
+    NSLog(@"Sign Up");
 }
 
 - (BOOL) validateCreds{
