@@ -22,7 +22,6 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April 2, 2018, 2:48 a.m." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REP-mg-gJw">
                         <rect key="frame" x="7" y="33" width="245" height="27"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="245" id="d9k-Us-cW8"/>
                             <constraint firstAttribute="height" constant="27" id="zMA-Ot-rtc"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
@@ -32,19 +31,14 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terell's New Retro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHv-Gw-gs3">
                         <rect key="frame" x="7" y="3" width="245" height="36"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="245" id="ZXl-Xo-zee"/>
                             <constraint firstAttribute="height" constant="36" id="ciU-op-Dsv"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKN-oj-dX2">
-                        <rect key="frame" x="7" y="63" width="245" height="55"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="55" id="cUS-LW-Rnl"/>
-                            <constraint firstAttribute="width" constant="245" id="zcy-Hm-bLq"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKN-oj-dX2">
+                        <rect key="frame" x="7" y="63" width="245" height="57.5"/>
                         <string key="text">This would be an exaple of a retro's descriptionThis would be an exaple of a retro's descriptionThis would be an exaple of a retro's descriptionThis would be an exaple of a retro's description</string>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
@@ -63,14 +57,18 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="RAa-cx-j5Y" secondAttribute="bottom" constant="20" id="47t-nE-JyP"/>
                 <constraint firstItem="kHv-Gw-gs3" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="3" id="Cy8-6G-xOP"/>
+                <constraint firstItem="REP-mg-gJw" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="7" id="ElE-fj-IgM"/>
+                <constraint firstItem="dKN-oj-dX2" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="7" id="FR0-XO-w7h"/>
                 <constraint firstItem="RAa-cx-j5Y" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="KTo-IA-zRq"/>
-                <constraint firstItem="REP-mg-gJw" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Kbe-M0-xpj"/>
-                <constraint firstItem="RAa-cx-j5Y" firstAttribute="top" secondItem="dKN-oj-dX2" secondAttribute="bottom" constant="9" id="NLX-gV-L71"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="kHv-Gw-gs3" secondAttribute="trailing" constant="7" id="PoA-eP-tzb"/>
                 <constraint firstItem="REP-mg-gJw" firstAttribute="top" secondItem="kHv-Gw-gs3" secondAttribute="bottom" constant="-6" id="SsJ-22-CTk"/>
+                <constraint firstItem="kHv-Gw-gs3" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="7" id="UG9-Rl-hfF"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="REP-mg-gJw" secondAttribute="trailing" constant="7" id="aFO-7F-N4V"/>
                 <constraint firstItem="dKN-oj-dX2" firstAttribute="top" secondItem="REP-mg-gJw" secondAttribute="bottom" constant="3" id="mfH-WI-Wb7"/>
                 <constraint firstItem="kHv-Gw-gs3" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="nvD-EA-wfv"/>
-                <constraint firstItem="dKN-oj-dX2" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="wym-Jk-IAM"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="dKN-oj-dX2" secondAttribute="trailing" constant="7" id="ufK-ds-S0h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="259" height="168"/>

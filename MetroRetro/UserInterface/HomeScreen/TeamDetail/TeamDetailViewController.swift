@@ -23,11 +23,12 @@ class TeamDetailViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadData(notification:)), name: Notification.Name("teamSelected"), object: nil)
+        setUpCollectoinViewLayout()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         let cellNib = UINib(nibName: "RetrospcectiveCollectionViewCell", bundle: nil)
         self.collectionView.register(cellNib, forCellWithReuseIdentifier: reuseIdentifier)
-
+        
     }
     
     
@@ -59,6 +60,14 @@ class TeamDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBAction func newRetroTapped(_ sender: Any) {
         print("newRetroTapped")
     }
+    
+    func setUpCollectoinViewLayout(){
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        layout.minimumInteritemSpacing = 0
+//        layout.minimumLineSpacing = 0
+        collectionView!.collectionViewLayout = layout
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -79,12 +88,11 @@ extension TeamDetailViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! RetrospcectiveCollectionViewCell
         if let theData = data {
-            let cellData = theData[indexPath.row];
-            cell.layer.cornerRadius = 5
+            let cellData = theData[indexPath.row]
             cell.layer.borderColor = UIColor.black.cgColor
             cell.layer.borderWidth = 0.5
             cell.title.text = cellData.title
-            cell.retoDescription.text = cellData.retroDescription
+            cell.retoDescription.text = cellData.retroDescription.isEmpty ? "No Description Provided" : cellData.retroDescription
             cell.numberOfItems.text = "\(cellData.items) Items"
         }
         
@@ -103,10 +111,11 @@ extension TeamDetailViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension TeamDetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 259.0, height: 168.0)
+//        return CGSize(width: collectionView.frame.width/4, height: collectionView.frame.width/4)
+        return CGSize(width: CGFloat((collectionView.frame.size.width / 3) - 5), height: collectionView.frame.width/3.2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
+        return 7
     }
 }

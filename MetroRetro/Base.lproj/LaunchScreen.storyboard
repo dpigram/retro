@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -30,25 +25,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collabBackground" translatesAutoresizingMaskIntoConstraints="NO" id="tar-WW-tOK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metro Retro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36E-1e-K67">
-                                <rect key="frame" x="107" y="48" width="160" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="2hd-C2-ZZk"/>
-                                    <constraint firstAttribute="width" constant="160" id="XrM-N6-7fz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tar-WW-tOK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-16" id="79D-cF-J3M"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tar-WW-tOK" secondAttribute="trailing" constant="-16" id="KFU-Pj-qkW"/>
-                            <constraint firstItem="36E-1e-K67" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dGq-mU-RRz"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="tar-WW-tOK" secondAttribute="bottom" id="hdz-Te-eYz"/>
                             <constraint firstItem="tar-WW-tOK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="n9Z-g1-HtS"/>
-                            <constraint firstItem="36E-1e-K67" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="28" id="qyA-Mn-gDz"/>
                         </constraints>
                     </view>
                 </viewController>

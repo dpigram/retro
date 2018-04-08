@@ -13,6 +13,7 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UIView *credsBackgroudView;
 
 @end
 
@@ -21,8 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
+    [self styleTextFields];
 }
 
+- (void)styleTextFields{
+    self.username.layer.borderColor = UIColor.grayColor.CGColor;
+    self.username.layer.borderWidth = 1;
+    self.username.layer.cornerRadius = 0;
+    
+    self.password.layer.borderColor = UIColor.grayColor.CGColor;
+    self.password.layer.borderWidth = 1;
+    self.password.layer.cornerRadius = 0;
+    
+    self.credsBackgroudView.layer.borderWidth = 1;
+    self.credsBackgroudView.layer.borderColor = UIColor.lightGrayColor.CGColor;
+    self.credsBackgroudView.layer.cornerRadius = 5;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
