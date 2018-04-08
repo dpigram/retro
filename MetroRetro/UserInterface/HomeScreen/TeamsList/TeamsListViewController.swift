@@ -23,8 +23,9 @@ class TeamsListViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tableView.backgroundColor = UIColor(red: 59.0/255, green: 65.0/255, blue: 78.0/255, alpha: 1)
+        let cellNib = UINib(nibName: "TeamListTableViewCell", bundle: nil)
+        self.tableView.register(cellNib, forCellReuseIdentifier: "TeamListTableViewCell")
         self.title = "Teams"
         refresher.attributedTitle = NSAttributedString(string: "Refreshing Data");
         refresher.addTarget(self, action: #selector(self.loadData), for: UIControlEvents.valueChanged)
@@ -46,11 +47,13 @@ class TeamsListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell: UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = self.teams[indexPath.row].name
-        cell.textLabel?.textColor = UIColor.white
-        cell.backgroundColor = UIColor.clear
+        let team = self.teams[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamListTableViewCell", for: indexPath) as! TeamListTableViewCell
+        cell.name.text = team.name
+        cell.teamDescription.text = team.desc
+//        cell.textLabel?.text = self.teams[indexPath.row].name
+//        cell.textLabel?.textColor = UIColor.white
+//        cell.backgroundColor = UIColor.clear
 
         return cell
     }
@@ -59,6 +62,10 @@ class TeamsListViewController: UITableViewController {
         print(self.teams[indexPath.row].name + "selected")
         tableView.deselectRow(at: indexPath, animated: true)
         NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "teamSelected"), object: self.teams[indexPath.row]))
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130.0
     }
     
     func loadData() {

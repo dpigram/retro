@@ -51,7 +51,7 @@
     NSString *myString = [NSString stringWithFormat:@"usrname: %@, passowrd %@", self.username.text, self.password.text];
     NSLog(@"%@", myString);
     
-    if(YES){
+    if([self validateCreds]){
         LoginServices *service = [LoginServices shareInstance];
         
         [service authenticateWithUsername:self.username.text andPassword:self.password.text withCompletionHandler:^(NSDictionary *data, NSError *error) {
@@ -66,14 +66,22 @@
                     }];
                 }
                 else{
+                    [self showErrorMessage:(NSString *)message];
                 }
             } else {
                 //handle error
             }
         }];
     }
-    
 }
+
+- (void)showErrorMessage:(NSString*)message{
+    UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"Invalid Login" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleDefault handler:nil];
+    [errorAlert addAction:action];
+    [self presentViewController:errorAlert animated:true completion:nil];
+}
+
 - (IBAction)signUpButtonTapped:(id)sender {
     NSLog(@"Sign Up");
 }

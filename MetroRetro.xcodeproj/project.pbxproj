@@ -26,6 +26,8 @@
 		D28009FB1F36575A00E8BE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28009FA1F36575A00E8BE10 /* Assets.xcassets */; };
 		D2800A091F36575A00E8BE10 /* MetroRetroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A081F36575A00E8BE10 /* MetroRetroTests.m */; };
 		D2800A141F36575A00E8BE10 /* MetroRetroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */; };
+		D29069EE207A725400C89007 /* TeamListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29069EC207A725400C89007 /* TeamListTableViewCell.swift */; };
+		D29069EF207A725400C89007 /* TeamListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29069ED207A725400C89007 /* TeamListTableViewCell.xib */; };
 		D2D354CF20719A6500D35EF9 /* UserSettingsServices.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D354CE20719A6500D35EF9 /* UserSettingsServices.m */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		D2800A0F1F36575A00E8BE10 /* MetroRetroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroRetroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2800A131F36575A00E8BE10 /* MetroRetroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetroRetroUITests.m; sourceTree = "<group>"; };
 		D2800A151F36575A00E8BE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D29069EC207A725400C89007 /* TeamListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListTableViewCell.swift; sourceTree = "<group>"; };
+		D29069ED207A725400C89007 /* TeamListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamListTableViewCell.xib; sourceTree = "<group>"; };
 		D2D354CD20719A6500D35EF9 /* UserSettingsServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSettingsServices.h; sourceTree = "<group>"; };
 		D2D354CE20719A6500D35EF9 /* UserSettingsServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSettingsServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				905A8E9C1F661004008C1F17 /* TeamsListViewController.swift */,
+				D29069EC207A725400C89007 /* TeamListTableViewCell.swift */,
+				D29069ED207A725400C89007 /* TeamListTableViewCell.xib */,
 			);
 			path = TeamsList;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			files = (
 				D28009FB1F36575A00E8BE10 /* Assets.xcassets in Resources */,
 				903432DB1F65E127004AA40E /* LaunchScreen.storyboard in Resources */,
+				D29069EF207A725400C89007 /* TeamListTableViewCell.xib in Resources */,
 				902D367E1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.xib in Resources */,
 				D28009F61F36575A00E8BE10 /* Main.storyboard in Resources */,
 			);
@@ -381,6 +388,7 @@
 				903432CB1F65E092004AA40E /* CoreDataManager.m in Sources */,
 				903432D61F65E0A4004AA40E /* LoginViewController.m in Sources */,
 				D28009ED1F36575A00E8BE10 /* main.m in Sources */,
+				D29069EE207A725400C89007 /* TeamListTableViewCell.swift in Sources */,
 				902D367D1FB92EB800469EFB /* RetrospcectiveCollectionViewCell.swift in Sources */,
 				905A8E9D1F661004008C1F17 /* TeamsListViewController.swift in Sources */,
 				903432CC1F65E092004AA40E /* LoginServices.m in Sources */,

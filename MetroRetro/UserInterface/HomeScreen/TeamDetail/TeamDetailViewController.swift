@@ -11,11 +11,10 @@ import UIKit
 class TeamDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var team: MRTeam?
-    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    var activityIndicator: UIActivityIndicatorView?
     fileprivate let reuseIdentifier = "RetroCell"
     
     var data: [MRRetro]?
@@ -28,23 +27,42 @@ class TeamDetailViewController: UIViewController, UICollectionViewDataSource, UI
         self.collectionView.dataSource = self
         let cellNib = UINib(nibName: "RetrospcectiveCollectionViewCell", bundle: nil)
         self.collectionView.register(cellNib, forCellWithReuseIdentifier: reuseIdentifier)
+        self.view.backgroundColor = UIColor.white
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        
         
     }
     
     
+    func rotated() {
+        collectionView.reloadData()
+    }
+    
     func loadData(notification: Notification) -> Void {
         if let team = notification.object {
+            activityIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: .gray);
+            activityIndicator?.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            activityIndicator?.startAnimating()
+            self.view.addSubview(activityIndicator!)
+            UIView.animate(withDuration: 0.5) {
+                self.collectionView.alpha = 0
+            }
             self.team = team as? MRTeam
             if let team = self.team {
                 self.label.text = team.name
-                self.descriptionTextView.text = team.desc
                 
                 let logInServices: LoginServices = LoginServices.shareInstance() as! LoginServices
                 
                 logInServices.requestRetros(forTeam: team.teamId, completionHandler: { (retros: [MRRetro]?, error: Error?) in
                     if let arrRetros = retros {
                         self.data = arrRetros
+                        UIView.animate(withDuration: 0.5, animations: {
+                            self.collectionView.alpha = 1
+                        })
                         self.collectionView.reloadData()
+                        self.activityIndicator?.stopAnimating()
+                        self.activityIndicator?.isHidden = true
+                        self.activityIndicator?.removeFromSuperview()
                     }
                 })
             }
